@@ -1,0 +1,36 @@
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Predefined Global functions</title>
+	</head>
+	<body>
+        EXAMPLE #1
+        {{range .}}
+            {{.}}
+        {{end}}
+
+        EXAMPLE #2
+        {{if .}}
+            {{.}}
+        {{end}}
+
+        EXAMPLE #3
+        {{range .}}
+            {{if .Name}}
+                {{.Name}}
+            {{end}}
+        {{end}}
+
+        EXAMPLE #4
+        {{range .}}
+            {{if and .Name .Admin}}
+                NAME: {{.Name}}
+                MOTTO: {{.Motto}}
+                Admin: {{.Admin}}
+            {{end}}
+        {{end}}
+	</body>
+	</html>

@@ -1,0 +1,27 @@
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+       <h1>Characters:</h1>
+       {{$heroes :=.Heroes}}
+       {{$villians :=.Villians}}
+        <h3>Heroes:</h3>
+        <ol>
+            {{range $hero := $heroes}}
+                <li>{{$hero.Name}} - {{$hero.Power}}</li>
+            {{end}}
+        </ol>
+        <h3>Villians:</h3>
+        <ol>
+             {{range $villian := $villians}}
+                <li>{{$villian.Name}} - {{$villian.Motto}}</li>
+            {{end}}
+        </ol>
+       
+	</body>
+	</html>
